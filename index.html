@@ -1,19 +1,60 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
+	<style>
+		.back-to-top {
+			display: none;
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			z-index: 99;
+			font-size: 16px;
+			border: none;
+			outline: none;
+			background-color: #333;
+			color: white;
+			cursor: pointer;
+			padding: 15px;
+			border-radius: 10px;
+		}
 
-    </head>
-    <body>
-        <p>
-            <button onclick="window.location.href='https://edit.duplexplay.com/'">Duplex</button>
-        </p>
-        <p>
-            <button onclick="window.location.href='https://console.clouddy.online/user/auth/login'">Clouddy</button>
-        </p>
-        <p>
-            <button onclick="window.location.href='https://controle.vip/lock'">Five</button>
-        </p>
-        <ul>
-        </ul>
-    </body>
+		.back-to-top:hover {
+			background-color: #555;
+		}
+	</style>
+</head>
+<body>
+	<p>
+		<button onclick="window.location.href='https://edit.duplexplay.com/'">Duplex</button>
+	</p>
+	<p>
+		<button onclick="window.location.href='https://console.clouddy.online/user/auth/login'">Clouddy</button>
+	</p>
+	<p>
+		<button onclick="window.location.href='https://controle.vip/lock'">Five</button>
+	</p>
+	<ul>
+	</ul>
+
+	<button class="back-to-top" onclick="topFunction()">Voltar ao topo</button>
+
+	<script>
+		// Mostrar o botão de voltar ao topo quando o usuário rolar a página
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				document.querySelector(".back-to-top").style.display = "block";
+			} else {
+				document.querySelector(".back-to-top").style.display = "none";
+			}
+		}
+
+		// Quando o usuário clicar no botão, voltar ao topo da página
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+	</script>
+</body>
 </html>
