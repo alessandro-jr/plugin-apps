@@ -1,5 +1,7 @@
 body{
-background-color: black;
+        border: 2px dashed var(--divider);
+    border-radius: var(--radius-large);
+background-color: #36393f;
 display: flex;
 flex-direction: column;
 align-items: center;
